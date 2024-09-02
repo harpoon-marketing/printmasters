@@ -1,0 +1,52 @@
+:is(.font-primary, h1, h2, h3, h4, h5, h6).font-primary {
+  font-family: var(--wp--preset--font-family--primary);
+}
+
+:is(.font-secondary, h1, h2, h3, h4, h5, h6).font-secondary {
+  font-family: var(--wp--preset--font-family--secondary);
+}
+
+:is(.text-body-small, h1, h2, h3, h4, h5, h6).text-body-small {
+  font-size: var(--wp--preset--font-size--body-small);
+  line-height: var(--wp--custom--line-height--body-small);
+}
+
+:is(.text-body-medium, h1, h2, h3, h4, h5, h6).text-body-medium {
+  font-size: var(--wp--preset--font-size--body-medium);
+  line-height: var(--wp--custom--line-height--body-medium);
+}
+
+:is(.text-body-large, h1, h2, h3, h4, h5, h6).text-body-large {
+  font-size: var(--wp--preset--font-size--body-large);
+  line-height: var(--wp--custom--line-height--body-large);
+}
+
+:is(.text-headline-small, h1, h2, h3, h4, h5, h6).text-headline-small {
+  font-size: var(--wp--preset--font-size--headline-small);
+  line-height: var(--wp--custom--line-height--headline-small);
+}
+
+:is(.text-headline-medium, h1, h2, h3, h4, h5, h6).text-headline-medium {
+  font-size: var(--wp--preset--font-size--headline-medium);
+  line-height: var(--wp--custom--line-height--headline-medium);
+}
+
+:is(.text-headline-large, h1, h2, h3, h4, h5, h6).text-headline-large {
+  font-size: var(--wp--preset--font-size--headline-large);
+  line-height: var(--wp--custom--line-height--headline-large);
+}
+
+:is(.text-display-small, h1, h2, h3, h4, h5, h6).text-display-small {
+  font-size: var(--wp--preset--font-size--display-small);
+  line-height: var(--wp--custom--line-height--display-small);
+}
+
+:is(.text-display-medium, h1, h2, h3, h4, h5, h6).text-display-medium {
+  font-size: var(--wp--preset--font-size--display-medium);
+  line-height: var(--wp--custom--line-height--display-medium);
+}
+
+:is(.text-display-large, h1, h2, h3, h4, h5, h6)text-display-large {
+  font-size: var(--wp--preset--font-size--display-large);
+  line-height: var(--wp--custom--line-height--display-large);
+}
