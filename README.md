@@ -1,1 +1,1 @@
-# WagadaPress Theme
+# Printmasters Theme
