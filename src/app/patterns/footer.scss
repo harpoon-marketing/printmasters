@@ -1,0 +1,40 @@
+.printmasters-footer-grid-cell:first-child {
+  grid-column: 1 / span 2 !important;
+}
+
+.printmasters-footer-grid-row {
+  justify-content: center;
+}
+
+.printmasters-footer-grid-row > nav > ul {
+  justify-content: center;
+  flex-wrap: wrap !important;
+}
+
+.printmasters-footer-grid-row p {
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  .printmasters-footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .printmasters-footer-grid-cell:first-child {
+    grid-column: 1 / span 1 !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .printmasters-footer-grid-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .printmasters-footer-grid-row {
+    justify-content: flex-start;
+  }
+
+  .printmasters-footer-grid-row:last-child {
+    justify-content: flex-end;
+  }
+}
