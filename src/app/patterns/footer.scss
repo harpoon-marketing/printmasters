@@ -46,3 +46,43 @@
     justify-content: flex-end;
   }
 }
+
+
+/* Footer CTA */
+@media (max-width: 839px) {
+  .printmasters-footer-cta-row {
+    flex-direction: column;
+  }
+  .printmasters-footer-cta-links {
+    flex-direction: column;
+    gap: var(--wp--preset--spacing--16) !important;
+  }
+}
+
+
+.printmasters-tel-icon,
+.printmasters-mail-icon {
+  padding: var(--wp--preset--spacing--08);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--wp--preset--spacing--08);
+  opacity: 0.9;
+}
+
+.printmasters-tel-icon:hover,
+.printmasters-mail-icon:hover {
+  opacity: 1;
+  transition: var(--wp--custom--transition)
+}
+
+.printmasters-tel-icon .printmasters-icon,
+.printmasters-mail-icon .printmasters-icon {
+  border: 1px solid rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.12);
+  transition: var(--wp--custom--transition)
+}
+
+.printmasters-tel-icon:hover  .printmasters-icon,
+.printmasters-mail-icon:hover  .printmasters-icon {
+  border: 1px solid rgba(255,255,255,0.9);
+}
