@@ -1,0 +1,40 @@
+.wp-block-video {
+  position: relative;
+  isolation: isolate;
+}
+
+.printmasters-video-controls {
+  display: flex;
+  position: absolute;
+  z-index: 333;
+  bottom: var(--wp--preset--spacing--24);
+  left: var(--wp--preset--spacing--24);
+  margin: 0 !important;
+  padding: var(--wp--preset--spacing--16);
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--wp--custom--transition);
+  cursor: pointer;
+  box-shadow: var(--wp--preset--shadow--natural);
+}
+
+.printmasters-video-controls:hover {
+  background-color: var(--wp--preset--color--primary);
+}
+
+.printmasters-video-controls.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.printmasters-video-controls svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--wp--preset--color--primary);
+  transition: var(--wp--custom--transition);
+}
+
+.printmasters-video-controls:hover svg {
+  fill: var(--wp--preset--color--white);
+}
