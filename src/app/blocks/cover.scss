@@ -1,11 +1,12 @@
 @media (max-width: 839px) {
   /* all cover blocks should be at least 24rem tall on mobile */
   .wp-block-cover:not(.no-min-height) {
-    min-height: 24rem !important;
+    min-height: 21rem !important;
   }
 }
 
 .wp-block-cover,
 .wp-block-cover-image {
   width: 100%;
+  height: 100%;
 }
