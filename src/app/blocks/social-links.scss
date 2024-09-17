@@ -1,0 +1,17 @@
+.printmasters-single-post-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--24);
+}
+
+.printmasters-single-post-social-links a {
+  color: var(--wp--preset--color--neutral-500);
+  transition: var(--wp--custom--transition);
+}
+
+
+.printmasters-single-post-social-links a:hover {
+  color: var(--wp--preset--color--primary);
+  fill: var(--wp--preset--color--primary);
+  text-decoration: none;
+}
