@@ -36,9 +36,14 @@
           "color": "#FFFFFF"
         },
         {
+          "name": "Neutral 150",
+          "slug": "neutral-150",
+          "color": "#F9F9F9"
+        },
+        {
           "name": "Neutral 200",
           "slug": "neutral-200",
-          "color": "#F9F9F9"
+          "color": "#E9E9E9"
         },
         {
           "name": "Neutral 300",
