@@ -1,0 +1,53 @@
+.printmasters-single-career-breadcrumbs, .printmasters-single-career {
+  margin-block-end: var(--wp--custom--margin--block);
+}
+
+
+.printmasters-single-career-row {
+  flex-direction: column !important;
+}
+
+
+@media (min-width: 840px) {
+  .printmasters-single-career-row {
+    flex-direction: row !important;
+  }
+}
+
+.printmasters-single-career-stack {
+  flex-shrink: 0;
+  gap: var(--wp--preset--spacing--16) !important;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 840px) {
+  .printmasters-single-career-stack {
+    top: 6.5rem !important;
+    width: auto;
+    align-items: flex-end;
+  }
+}
+
+
+.printmasters-single-career-stack .wp-block-printmasters-social-links {
+  gap: var(--wp--preset--spacing--08) !important;
+}
+
+.printmasters-single-career-stack .wp-block-printmasters-social-link {
+  color: var(--wp--preset--color--neutral-500);
+  transition: var(--wp--custom--transition);
+}
+
+.printmasters-single-career-stack .wp-block-printmasters-social-link svg {
+  transition: var(--wp--custom--transition);
+
+}
+
+.printmasters-single-career-stack .wp-block-printmasters-social-link:hover {
+  color: var(--wp--preset--color--primary);
+}
+
+.printmasters-single-career-stack .wp-block-printmasters-social-link:hover svg {
+  fill: var(--wp--preset--color--primary);
+}
