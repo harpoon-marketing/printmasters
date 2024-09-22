@@ -23,7 +23,7 @@
 
 @media (min-width: 840px) {
   .printmasters-single-career-stack {
-    top: 6.5rem !important;
+    top: var(--wp--custom--aside-top) !important;
     width: auto;
     align-items: flex-end;
   }

@@ -1,0 +1,8 @@
+.printmasters-page-with-sidebar {
+  margin-block-end: var(--wp--custom--margin--block);
+}
+
+.printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
+  flex-shrink: 0;
+  top: var(--wp--custom--aside-top);
+}

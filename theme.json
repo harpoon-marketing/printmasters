@@ -85,7 +85,8 @@
         "inline": "clamp(1rem, 1.25vw + 0.531rem, 1.5rem)",
         "block": "clamp(1.5rem, 8.75vw + -1.781rem, 5rem)"
       },
-      "transition": "all 0.3s cubic-bezier(0.12, 0.72, 0.33, 1)"
+      "transition": "all 0.3s cubic-bezier(0.12, 0.72, 0.33, 1)",
+      "aside-top": "6.5rem"
     },
     "dimensions": {},
     "layout": {
@@ -346,6 +347,20 @@
       "area": "footer",
       "name": "footer",
       "title": "Footer"
+    },
+    {
+      "area": "uncategorized",
+      "name": "sidebar",
+      "title": "Sidebar"
+    }
+  ],
+  "customTemplates": [
+    {
+      "name": "page-with-sidebar",
+      "postTypes": [
+        "page"
+      ],
+      "title": "Page with Sidebar"
     }
   ],
   "patterns": [
