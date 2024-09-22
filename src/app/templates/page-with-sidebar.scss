@@ -51,7 +51,6 @@
   }
 }
 
-.printmasters-page-with-sidebar-content {
-  scroll-margin-top: var(--wp--custom--aside-top);
-  
+.printmasters-page-with-sidebar-content > * {
+  scroll-margin-top: calc(var(--wp--custom--aside-top) - var(--wp--preset--spacing--24));
 }

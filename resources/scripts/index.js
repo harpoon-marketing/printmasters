@@ -80,17 +80,20 @@ document.addEventListener("DOMContentLoaded", () => {
       return document.getElementById(sectionId); // Get the corresponding section
     });
 
-    // Add 'is-active' class to the first button by default
-    buttons[0].classList.add("is-active");
+    buttons[0].classList.add("is-active"); // Set the first button as active by default
+
+    let observerActive = true; // Flag to control the observer
 
     // Define the middle of the viewport using rootMargin
     const options = {
-      root: null,
-      rootMargin: "-20% 0px -80% 0px",
-      threshold: 0.0,
+      root: null, // Use the viewport as the root
+      rootMargin: "-20% 0px -80% 0px", // Middle of the screen (50% from the top and bottom)
+      threshold: 0.0, // Trigger as soon as the section crosses the middle
     };
 
     const observer = new IntersectionObserver((entries) => {
+      if (!observerActive) return; // If observer is disabled, don't do anything
+
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Find the button that corresponds to the section in view
@@ -109,6 +112,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Observe each section
     sections.forEach((section) => observer.observe(section));
+
+    // Add click event to buttons
+    buttons.forEach((button, index) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default anchor behavior to handle smooth scroll
+
+        // Disable observer temporarily
+        observerActive = false;
+
+        // Manually set the clicked button as active
+        buttons.forEach((btn) => btn.classList.remove("is-active"));
+        button.classList.add("is-active");
+
+        // Smooth scroll to the corresponding section
+        const section = sections[index];
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        // Re-enable observer after a delay (enough time for smooth scroll to finish)
+        setTimeout(() => {
+          observerActive = true;
+        }, 1000); // Adjust the timeout duration depending on your smooth scroll speed
+      });
+    });
   };
 
   initVideo();
