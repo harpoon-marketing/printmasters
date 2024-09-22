@@ -20,12 +20,24 @@
 
 .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
   flex-shrink: 0;
-  position: relative !important;
   width: 100%;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  top: 100% !important;
+}
+
+@media (max-width: 839px) {
+  .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
+    position: relative !important;
+    top: 100% !important;
+  }
+}
+
+@media (min-width: 840px) {
+  .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
+    top: var(--wp--custom--aside-top);
+
+  }
 }
 
 .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside::-webkit-scrollbar {

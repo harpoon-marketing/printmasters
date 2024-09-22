@@ -74,7 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!buttons) return;
 
-    buttons[0].classList.add("is-active");
+    const sections = Array.from(buttons).map((button) => {
+      const link = button.querySelector("a");
+      const sectionId = link.getAttribute("href").slice(1); // Get the ID without the #
+      return document.getElementById(sectionId); // Get the corresponding section
+    });
+
+    buttons[0].classList.add("is-active"); // Set the first button active by default
 
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
@@ -85,14 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
         button.classList.add("is-active");
       });
     });
-
-    const sections = buttons
-      .map((button) => {
-        const id = button.querySelector("a").getAttribute("href").substring(1);
-        return document.getElementById(id);
-      })
-      .filter((section) => section !== null);
   };
+
+  // Initialize the sidebar functionality when the DOM is loaded
+  document.addEventListener("DOMContentLoaded", initSidebar);
 
   initVideo();
   initSidebar();
