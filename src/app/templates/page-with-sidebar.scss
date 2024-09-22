@@ -2,7 +2,44 @@
   margin-block-end: var(--wp--custom--margin--block);
 }
 
+.printmasters-page-with-sidebar-row {
+  flex-direction: column !important;
+}
+
+@media (min-width: 840px) {
+  .printmasters-page-with-sidebar-row {
+    flex-direction: row !important;
+  }
+}
+
 .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
   flex-shrink: 0;
   top: var(--wp--custom--aside-top);
+  width: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
+    width: auto;
+    overflow: auto;
+  }
+}
+
+.printmasters-sidebar-buttons {
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 840px) {
+  .printmasters-sidebar-buttons {
+    flex-direction: column !important;
+
+  }
 }
