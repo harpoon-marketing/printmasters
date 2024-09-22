@@ -1,0 +1,47 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
+    <!-- wp:printmasters/flex-container {"direction":{"directionMobile":"col","directionTablet":"col","directionDesktop":"row"},"metadata":{"categories":["pm"],"patternName":"printmasters/hero-03","name":"Hero #03"},"style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|16"}}}} -->
+    <div class="wp-block-printmasters-flex-container items-stretch tablet--items-stretch desktop--items-stretch content-start tablet--content-start desktop--content-start flex-col tablet--flex-col desktop--flex-row justify-start tablet--justify-start desktop--justify-start flex-no-wrap tablet--flex-no-wrap desktop--flex-no-wrap has-global-margin-bottom"
+         style="margin-top:var(--wp--preset--spacing--16)">
+        <!-- wp:printmasters/flex-item {"alignItems":{"itemsMobile":"stretch","itemsTablet":"stretch","itemsDesktop":"start"},"direction":{"directionMobile":"col","directionTablet":"col","directionDesktop":"col"},"justifyContent":{"justifyMobile":"start","justifyTablet":"start","justifyDesktop":"between"},"alignSelf":{"selfMobile":"auto","selfTablet":"auto","selfDesktop":"stretch"},"order":{"orderMobile":"1","orderTablet":"1","orderDesktop":0},"style":{"spacing":{"padding":{"top":"var:preset|spacing|24","bottom":"var:preset|spacing|24","left":"var:preset|spacing|24","right":"var:preset|spacing|24"}}},"backgroundColor":"primary"} -->
+        <div class="wp-block-printmasters-flex-item items-stretch tablet--items-stretch desktop--items-start content-start tablet--content-start desktop--content-start flex-col tablet--flex-col desktop--flex-col justify-start tablet--justify-start desktop--justify-between flex-no-wrap tablet--flex-no-wrap desktop--flex-no-wrap self-auto tablet--self-auto desktop--self-stretch grow-0 tablet--grow-0 desktop--grow-0 shrink tablet--shrink desktop--shrink order-1 tablet--order-1 desktop--order-0 has-primary-background-color has-background"
+             style="padding-top:var(--wp--preset--spacing--24);padding-right:var(--wp--preset--spacing--24);padding-bottom:var(--wp--preset--spacing--24);padding-left:var(--wp--preset--spacing--24);--flex-basis:100%;--flex-basis-tablet:100%;--flex-basis-desktop:50%">
+            <!-- wp:printmasters/breadcrumbs {"ancestors":[{"parent":null,"title":"Home"},{"parent":null,"title":"Current Page"}],"style":{"elements":{"link":{"color":{"text":"var:preset|color|neutral-100"}}},"typography":{"fontSize":"14px"}},"textColor":"neutral-100"} /-->
+
+            <!-- wp:post-title {"level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|neutral-100"}}}},"textColor":"neutral-100"} /--></div>
+        <!-- /wp:printmasters/flex-item -->
+
+        <!-- wp:printmasters/flex-item -->
+        <div class="wp-block-printmasters-flex-item items-stretch tablet--items-stretch desktop--items-stretch content-start tablet--content-start desktop--content-start flex-row tablet--flex-col desktop--flex-col justify-start tablet--justify-start desktop--justify-start flex-no-wrap tablet--flex-no-wrap desktop--flex-no-wrap self-auto tablet--self-auto desktop--self-auto grow-0 tablet--grow-0 desktop--grow-0 shrink tablet--shrink desktop--shrink order-0 tablet--order-0 desktop--order-0"
+             style="--flex-basis:100%;--flex-basis-tablet:100%;--flex-basis-desktop:50%">
+            <!-- wp:cover {"useFeaturedImage":true,"dimRatio":50,"overlayColor":"neutral-200","isUserOverlayColor":true,"minHeight":20,"minHeightUnit":"rem","isDark":false,"layout":{"type":"constrained"}} -->
+            <div class="wp-block-cover is-light" style="min-height:20rem"><span aria-hidden="true"
+                                                                                class="wp-block-cover__background has-neutral-200-background-color has-background-dim"></span>
+                <div class="wp-block-cover__inner-container">
+                    <!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+                    <p class="has-text-align-center has-large-font-size">Image</p>
+                    <!-- /wp:paragraph --></div>
+            </div>
+            <!-- /wp:cover --></div>
+        <!-- /wp:printmasters/flex-item --></div>
+    <!-- /wp:printmasters/flex-container --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"main","className":"printmasters-page-with-sidebar","layout":{"type":"constrained"}} -->
+<main class="wp-block-group printmasters-page-with-sidebar">
+    <!-- wp:group {"className":"printmasters-page-with-sidebar-row","style":{"spacing":{"blockGap":"var:preset|spacing|48"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
+    <div class="wp-block-group printmasters-page-with-sidebar-row">
+        <!-- wp:group {"className":"printmasters-page-with-sidebar-aside","style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+        <div class="wp-block-group printmasters-page-with-sidebar-aside">
+            <!-- wp:template-part {"slug":"sidebar","theme":"printmasters","tagName":"aside"} /--></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+        <div class="wp-block-group"><!-- wp:post-content /--></div>
+        <!-- /wp:group --></div>
+    <!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
