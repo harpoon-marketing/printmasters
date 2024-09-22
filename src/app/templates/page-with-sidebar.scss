@@ -50,3 +50,8 @@
     overflow: auto;
   }
 }
+
+.printmasters-page-with-sidebar-content {
+  scroll-margin-top: var(--wp--custom--aside-top);
+  
+}

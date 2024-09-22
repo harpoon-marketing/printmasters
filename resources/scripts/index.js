@@ -80,21 +80,36 @@ document.addEventListener("DOMContentLoaded", () => {
       return document.getElementById(sectionId); // Get the corresponding section
     });
 
-    buttons[0].classList.add("is-active"); // Set the first button active by default
+    // Add 'is-active' class to the first button by default
+    buttons[0].classList.add("is-active");
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        if (button.classList.contains("is-active")) return;
+    // Define the middle of the viewport using rootMargin
+    const options = {
+      root: null,
+      rootMargin: "-20% 0px -80% 0px",
+      threshold: 0.0,
+    };
 
-        buttons.forEach((btn) => btn.classList.remove("is-active"));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Find the button that corresponds to the section in view
+          const activeButton = document.querySelector(
+            `a[href="#${entry.target.id}"]`,
+          ).parentElement;
 
-        button.classList.add("is-active");
+          // Remove 'is-active' class from all buttons
+          buttons.forEach((btn) => btn.classList.remove("is-active"));
+
+          // Add 'is-active' class to the corresponding button
+          activeButton.classList.add("is-active");
+        }
       });
-    });
-  };
+    }, options);
 
-  // Initialize the sidebar functionality when the DOM is loaded
-  document.addEventListener("DOMContentLoaded", initSidebar);
+    // Observe each section
+    sections.forEach((section) => observer.observe(section));
+  };
 
   initVideo();
   initSidebar();
