@@ -65,7 +65,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  const initSidebar = () => {};
+  const initSidebar = () => {
+    const buttons = Array.from(
+      document.querySelectorAll(
+        ".printmasters-sidebar-buttons .wp-block-button",
+      ),
+    );
+
+    if (!buttons) return;
+
+    buttons[0].classList.add("is-active");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        if (button.classList.contains("is-active")) return;
+
+        buttons.forEach((btn) => btn.classList.remove("is-active"));
+
+        button.classList.add("is-active");
+      });
+    });
+
+    const sections = buttons
+      .map((button) => {
+        const id = button.querySelector("a").getAttribute("href").substring(1);
+        return document.getElementById(id);
+      })
+      .filter((section) => section !== null);
+  };
 
   initVideo();
   initSidebar();

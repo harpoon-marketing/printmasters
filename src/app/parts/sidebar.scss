@@ -13,6 +13,7 @@
   left: 0;
 }
 
+.printmasters-sidebar-buttons .wp-block-button.is-active:before,
 .printmasters-sidebar-buttons .wp-block-button:hover:before {
   width: 0.25rem;
 }
@@ -27,6 +28,7 @@
   color: var(--wp--preset--color--neutral-400) !important;
 }
 
+.printmasters-sidebar-buttons .wp-block-button.is-active > a,
 .printmasters-sidebar-buttons .wp-block-button > a:hover {
   background-color: var(--wp--preset--color--neutral-200) !important;
   color: var(--wp--preset--color--neutral-500) !important;
