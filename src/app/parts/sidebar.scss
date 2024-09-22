@@ -1,7 +1,13 @@
 
 .printmasters-sidebar-buttons .wp-block-button {
   position: relative;
-  min-width: 12rem;
+  min-width: 9rem;
+}
+
+@media (min-width: 840px) {
+  .printmasters-sidebar-buttons .wp-block-button {
+    min-width: 12rem;
+  }
 }
 
 .printmasters-sidebar-buttons .wp-block-button:before {
@@ -33,4 +39,22 @@
   background-color: var(--wp--preset--color--neutral-200) !important;
   color: var(--wp--preset--color--neutral-500) !important;
   padding-left: var(--wp--preset--spacing--16);
+}
+
+.printmasters-sidebar-buttons {
+  top: var(--wp--custom--aside-top);
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 839px) {
+  .printmasters-sidebar-buttons {
+    gap: var(--wp--preset--spacing--16) !important;
+  }
+}
+
+@media (min-width: 840px) {
+  .printmasters-sidebar-buttons {
+    flex-direction: column !important;
+  }
 }
