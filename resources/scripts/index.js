@@ -68,17 +68,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const initSidebar = () => {
     const buttons = Array.from(
       document.querySelectorAll(
-        ".printmasters-sidebar-buttons .wp-block-button",
-      ),
+        ".printmasters-sidebar-buttons .wp-block-button"
+      )
     );
 
-    if (!buttons) return;
+    if (!buttons.length) return;
 
     const sections = Array.from(buttons).map((button) => {
       const link = button.querySelector("a");
       const sectionId = link.getAttribute("href").slice(1); // Get the ID without the #
       return document.getElementById(sectionId); // Get the corresponding section
     });
+
+    if (!sections) return;
 
     buttons[0].classList.add("is-active"); // Set the first button as active by default
 
@@ -98,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) {
           // Find the button that corresponds to the section in view
           const activeButton = document.querySelector(
-            `a[href="#${entry.target.id}"]`,
+            `a[href="#${entry.target.id}"]`
           ).parentElement;
 
           // Remove 'is-active' class from all buttons
