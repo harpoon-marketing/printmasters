@@ -48,6 +48,7 @@
   .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
     width: auto;
     overflow: auto;
+    max-width: 12rem;
   }
 }
 
@@ -55,4 +56,8 @@
   scroll-margin-top: calc(
     var(--wp--custom--aside-top) - var(--wp--preset--spacing--24)
   );
+}
+
+.printmasters-sidebar-buttons .wp-block-button {
+  width: 100%;
 }
