@@ -1,5 +1,5 @@
 .printmasters-page-with-sidebar {
-  margin-block-end: var(--wp--custom--margin--block);
+  margin-block-end: var(--wp--custom--margin--block) !important;
 }
 
 .printmasters-page-with-sidebar-row {
@@ -36,11 +36,11 @@
 @media (min-width: 840px) {
   .printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside {
     top: var(--wp--custom--aside-top);
-
   }
 }
 
-.printmasters-page-with-sidebar-row .printmasters-page-with-sidebar-aside::-webkit-scrollbar {
+.printmasters-page-with-sidebar-row
+  .printmasters-page-with-sidebar-aside::-webkit-scrollbar {
   display: none;
 }
 
@@ -52,5 +52,7 @@
 }
 
 .printmasters-page-with-sidebar-content > * {
-  scroll-margin-top: calc(var(--wp--custom--aside-top) - var(--wp--preset--spacing--24));
+  scroll-margin-top: calc(
+    var(--wp--custom--aside-top) - var(--wp--preset--spacing--24)
+  );
 }
