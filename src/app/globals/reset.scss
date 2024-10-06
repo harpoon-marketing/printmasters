@@ -29,3 +29,9 @@ ul {
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 839px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}

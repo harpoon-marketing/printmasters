@@ -39,8 +39,8 @@
 }
 
 .wp-block-printmasters-navigation-item:hover
-.wp-block-printmasters-navigation-item-expand
-span,
+  .wp-block-printmasters-navigation-item-expand
+  span,
 .is-active .wp-block-printmasters-navigation-item-expand span {
   color: var(--wp--preset--color--primary);
 }
@@ -108,4 +108,15 @@ span,
 
 ul.wp-block-printmasters-navigation-items {
   padding-inline-start: 0 !important;
+}
+
+.wp-block-printmasters-navigation-menu-stack a:hover {
+  text-decoration: none;
+  color: var(--wp--preset--color--primary);
+}
+
+.wp-block-printmasters-navigation-item:hover
+  .wp-block-printmasters-navigation-item-expand
+  span {
+  color: var(--wp--preset--color--primary);
 }
