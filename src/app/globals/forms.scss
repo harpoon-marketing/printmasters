@@ -1,0 +1,53 @@
+input, textarea {
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--wp--preset--color--neutral-200);
+  transition: var(--wp--custom--transition);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--24);
+}
+
+.printmasters-contact-form-group {
+  display: flex;
+  gap: var(--wp--preset--spacing--16);
+}
+
+.printmasters-contact-form-block input[type="text"],
+.printmasters-contact-form-block input[type="email"],
+.printmasters-contact-form-block input[type="tel"],
+.printmasters-contact-form-block textarea {
+  padding: 0.5rem 0.5rem;
+  font-size: inherit;
+}
+
+.printmasters-contact-form-block input[type="text"]:focus,
+.printmasters-contact-form-block input[type="email"]:focus,
+.printmasters-contact-form-block input[type="tel"]:focus,
+.printmasters-contact-form-block textarea:focus {
+  border: 2px solid var(--wp--preset--color--primary);
+}
+
+.printmasters-contact-button {
+  background-color: var(--wp--preset--color--primary) !important;
+  color: var(--wp--preset--color--neutral-100) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--wp--custom--gap--button);
+  padding: 0.5625rem var(--wp--preset--spacing--32);
+  border: none;
+  cursor: pointer;
+  font-size: var(--wp--preset--font-size--body);
+  font-weight: 400;
+  line-height: var(--wp--custom--line-height--body);
+  transition: var(--wp--custom--transition);
+}
+
+.printmasters-contact-button:hover {
+  background-color: var(--wp--preset--color--neutral-500) !important;
+}
