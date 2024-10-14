@@ -1,3 +1,26 @@
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  transition: all 0.15s cubic-bezier(0.12, 0.72, 0.33, 1);
+  z-index: 90;
+  min-height: 6rem;
+  margin-top: 0;
+  background-color: var(--wp--preset--color--white);
+  position: fixed;
+  transition: var(--wp--custom--transition);
+}
+
+header.header--scrolled {
+  position: fixed !important;
+  background-color: var(--wp--preset--color--white);
+  box-shadow: var(--wp--preset--shadow--natural);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .printmasters-header {
   padding-block: var(--wp--preset--spacing--24);
   padding-inline: var(--wp--custom--padding--inline);
