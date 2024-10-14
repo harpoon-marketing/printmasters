@@ -39,3 +39,9 @@ html {
 li::marker {
   color: var(--wp--preset--color--primary);
 }
+
+@media (max-width: 839px) {
+  .height-mobile {
+    min-height: auto !important;
+  }
+}
