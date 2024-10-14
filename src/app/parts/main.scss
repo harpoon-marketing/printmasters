@@ -1,0 +1,18 @@
+.wp-site-blocks {
+  position: relative;
+  // overflow: hidden;
+}
+
+@media (min-width: 840px) {
+  main,
+  .printmasters-archive {
+    padding-top: 6rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  main,
+  .printmasters-archive {
+    padding-top: 7.125rem !important;
+  }
+}

@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Define the middle of the viewport using rootMargin
     const options = {
       root: null, // Use the viewport as the root
-      rootMargin: "-20% 0px -80% 0px", // Middle of the screen (50% from the top and bottom)
+      rootMargin: "-25% 0px -75% 0px", // Middle of the screen (50% from the top and bottom)
       threshold: 0.0, // Trigger as soon as the section crosses the middle
     };
 
@@ -142,6 +142,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const initHeader = () => {
+    const header = document.querySelector("header");
+    const body = document.querySelector("body");
+
+    if (!header) {
+      return;
+    }
+
+    // Function to handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        header.classList.add("header--scrolled");
+      } else {
+        header.classList.remove("header--scrolled");
+      }
+    };
+
+    // Initial check on page load
+    handleScroll();
+
+    // Debounce the scroll event for performance
+    let timeout;
+    window.addEventListener("scroll", () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(handleScroll, 0); // Adjust debounce time as needed
+    });
+  };
+
+  function adjustScrollPosition() {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    if (window.location.hash) {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - headerHeight,
+          behavior: "smooth",
+        });
+      }
+    }
+  }
+
+  // Adjust scroll position on page load
+  adjustScrollPosition();
+
+  // Adjust scroll position on hash change (internal link click)
+  window.addEventListener("hashchange", adjustScrollPosition);
+
   initVideo();
   initSidebar();
+  initHeader();
 });

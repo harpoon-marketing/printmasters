@@ -86,7 +86,7 @@
         "block": "clamp(1.5rem, 8.75vw + -1.781rem, 5rem)"
       },
       "transition": "all 0.3s cubic-bezier(0.12, 0.72, 0.33, 1)",
-      "aside-top": "6.5rem"
+      "aside-top": "12rem"
     },
     "dimensions": {},
     "layout": {

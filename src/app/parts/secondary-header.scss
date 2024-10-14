@@ -1,0 +1,22 @@
+.printmasters-secondary-header .wp-block-printmasters-flex-item {
+  width: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.printmasters-secondary-header .wp-block-printmasters-buttons {
+  flex-wrap: nowrap;
+}
+
+.printmasters-secondary-header a.wp-block-printmasters-button:hover {
+  color: var(--wp--preset--color--neutral-100) !important;
+  background-color: var(--wp--preset--color--neutral-500) !important;
+}
+
+.printmasters-secondary-header a.wp-block-printmasters-button,
+.printmasters-secondary-header .wp-block-printmasters-button.is-filled {
+  color: var(--wp--preset--color--neutral-400) !important;
+  background-color: var(--wp--preset--color--neutral-200) !important;
+  text-wrap: nowrap;
+}
