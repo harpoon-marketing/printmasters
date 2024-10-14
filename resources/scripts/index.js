@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Define the middle of the viewport using rootMargin
     const options = {
       root: null, // Use the viewport as the root
-      rootMargin: "-20% 0px -80% 0px", // Middle of the screen (50% from the top and bottom)
+      rootMargin: "-25% 0px -75% 0px", // Middle of the screen (50% from the top and bottom)
       threshold: 0.0, // Trigger as soon as the section crosses the middle
     };
 
