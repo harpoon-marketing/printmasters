@@ -47,7 +47,6 @@
   }
 }
 
-
 /* Footer CTA */
 @media (max-width: 839px) {
   .printmasters-footer-cta-row {
@@ -71,17 +70,40 @@
 .printmasters-tel-icon:hover,
 .printmasters-mail-icon:hover {
   opacity: 1;
-  transition: var(--wp--custom--transition)
+  transition: var(--wp--custom--transition);
 }
 
 .printmasters-tel-icon .printmasters-icon,
 .printmasters-mail-icon .printmasters-icon {
-  border: 1px solid rgba(255,255,255,0.5);
-  background-color: rgba(255,255,255,0.12);
-  transition: var(--wp--custom--transition)
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: var(--wp--custom--transition);
 }
 
-.printmasters-tel-icon:hover  .printmasters-icon,
-.printmasters-mail-icon:hover  .printmasters-icon {
-  border: 1px solid rgba(255,255,255,0.9);
+.printmasters-tel-icon:hover .printmasters-icon,
+.printmasters-mail-icon:hover .printmasters-icon {
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.printmasters-footer .wp-block-printmasters-social-link {
+  border-radius: 48px;
+  padding-top: var(--wp--preset--spacing--08);
+  padding-right: var(--wp--preset--spacing--08);
+  padding-bottom: var(--wp--preset--spacing--08);
+  padding-left: var(--wp--preset--spacing--08);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: var(--wp--custom--transition);
+  opacity: 0.8;
+}
+
+.printmasters-footer .wp-block-printmasters-social-link:hover {
+  opacity: 1;
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.printmasters-footer .wp-block-printmasters-social-link svg {
+  width: 20px !important;
+  height: 20px !important;
 }
