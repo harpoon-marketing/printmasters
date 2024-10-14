@@ -170,6 +170,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  function adjustScrollPosition() {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    if (window.location.hash) {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - headerHeight,
+          behavior: "smooth",
+        });
+      }
+    }
+  }
+
+  // Adjust scroll position on page load
+  adjustScrollPosition();
+
+  // Adjust scroll position on hash change (internal link click)
+  window.addEventListener("hashchange", adjustScrollPosition);
+
   initVideo();
   initSidebar();
   initHeader();
