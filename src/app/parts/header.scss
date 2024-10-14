@@ -143,3 +143,31 @@ ul.wp-block-printmasters-navigation-items {
   span {
   color: var(--wp--preset--color--primary);
 }
+
+/* Dropdown */
+
+.printmasters-dropdown {
+  display: flex;
+  padding-inline: var(--wp--custom--padding--inline);
+}
+
+.wp-block-printmasters-navigation-menu-stack:last-child {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  .printmasters-dropdown {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+  }
+
+  .wp-block-printmasters-navigation-menu-stack {
+    display: flex;
+    width: 50%;
+    margin: 0 !important;
+  }
+
+  .wp-block-printmasters-navigation-menu-stack:last-child {
+    display: flex;
+  }
+}
