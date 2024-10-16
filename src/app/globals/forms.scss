@@ -14,11 +14,31 @@ form {
 
 .printmasters-contact-form-group {
   display: flex;
+  flex-direction: column;
   gap: var(--wp--preset--spacing--16);
 }
 
 .printmasters-contact-form-block {
   width: 100%;
+}
+
+@media (min-width: 600px) {
+  .printmasters-contact-form-group {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .printmasters-contact-form-block {
+  }
+}
+
+.printmasters-contact-form-block.file input {
+  display: none;
+}
+
+.printmasters-contact-form-group h5 {
+  color: var(--wp--preset--color--neutral-500);
+  font-weight: 400 !important;
+  margin-bottom: 0.25rem;
 }
 
 .printmasters-contact-form-block input[type="text"],
@@ -66,7 +86,7 @@ form {
 }
 
 .wpcf7-not-valid-tip {
-    font-size: 12px;
+  font-size: 12px;
   line-height: 20px;
 }
 
@@ -75,4 +95,58 @@ form {
   padding: 0;
   border: none;
   color: #dc3232;
+}
+
+.printmasters-contact-form-file input[type="file"] {
+  display: none;
+}
+
+/* File */
+
+input[type=file] {
+  outline: 0;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--wp--preset--color--secondary-100);
+  border-radius: 5px;
+  padding: 1.2em;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  height: 12rem;
+
+
+  i {
+    display: block;
+    font-size: 42px;
+    padding-bottom: 16px;
+  }
+
+  i,
+  .title {
+    color: var(--wp--preset--color--secondary-100);
+    transition: 200ms color;
+    padding-top: 1rem;
+  }
+
+  &:hover {
+    border-color: var(--wp--preset--color--primary);
+
+    .title {
+      color: var(--wp--preset--color--primary);
+    }
+
+    svg {
+      fill: var(--wp--preset--color--primary);
+    }
+  }
 }
