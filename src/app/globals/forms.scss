@@ -1,4 +1,4 @@
-input, textarea {
+input:not([type="file"]):not([type="checkbox"]), textarea {
   font-family: inherit;
   width: 100%;
   outline: none;
@@ -15,6 +15,10 @@ form {
 .printmasters-contact-form-group {
   display: flex;
   gap: var(--wp--preset--spacing--16);
+}
+
+.printmasters-contact-form-block {
+  width: 100%;
 }
 
 .printmasters-contact-form-block input[type="text"],
@@ -50,4 +54,25 @@ form {
 
 .printmasters-contact-button:hover {
   background-color: var(--wp--preset--color--neutral-500) !important;
+}
+
+.printmasters-contact-form-block-acceptance .wpcf7-list-item {
+  margin: 0;
+}
+
+.printmasters-contact-form-block-acceptance .wpcf7-list-item label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wpcf7-not-valid-tip {
+    font-size: 12px;
+  line-height: 20px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #dc3232;
 }
